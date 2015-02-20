@@ -375,7 +375,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
         }
         mViewPager = view;
         mViewPager.setOnPageChangeListener(this);
-        invalidate();
+        requestLayout();
     }
 
     @Override
@@ -396,7 +396,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
 
     @Override
     public void notifyDataSetChanged() {
-        invalidate();
+        requestLayout();
     }
 
     @Override
