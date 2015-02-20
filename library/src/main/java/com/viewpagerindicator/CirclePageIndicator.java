@@ -231,7 +231,8 @@ public class CirclePageIndicator extends View implements PageIndicator {
         final float shortOffset = shortPaddingBefore + mRadius;
         float longOffset = longPaddingBefore + mRadius;
         if (mCentered) {
-            longOffset += ((longSize - longPaddingBefore - longPaddingAfter) / 2.0f) - ((count * threeRadius) / 2.0f);
+            final float allCirclesWidth = mRadius * 2.0f * count + mRadius * (count - 1);  // each circle is 2r wide and 2 circles are separated by r
+            longOffset += ((longSize - longPaddingBefore - longPaddingAfter) / 2.0f) - (allCirclesWidth / 2.0f);
         }
 
         float dX;
