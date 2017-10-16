@@ -1,0 +1,6 @@
+rootProject.name = 'parent'
+include ':library'
+//include ':sample' removing sample cuz I can't build this shit
+
+project(':library').projectDir = "$rootDir/library" as File
+//project(':sample').projectDir = "$rootDir/sample" as File
